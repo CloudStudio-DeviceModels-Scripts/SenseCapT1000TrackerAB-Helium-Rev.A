@@ -20,23 +20,27 @@ function getEndpoints(deviceAddress, endpoints)
   // all endpoints included in the device automatically when the device
   // is created.
   
-    //Tracker
-    var eplt = endpoints.addEndpoint("1", "Location tracking", endpointType.locationTracker);
+  //Tracker
+  var eplt = endpoints.addEndpoint("1", "Location tracking", endpointType.locationTracker);
 
-    //Bateria
-    var epbat = endpoints.addEndpoint("2", "Battery", endpointType.genericSensor); 
-        epbat.variableTypeId = 1006;
+  //Bateria
+  var epbat = endpoints.addEndpoint("2", "Battery", endpointType.genericSensor); 
+  epbat.variableTypeId = 1241;
 
-    //SOS
-    var epsos = endpoints.addEndpoint("3", "SOS", endpointType.iasSensor, iasEndpointSubType.alarmInput);
+  //SOS
+  
+  var epsos = endpoints.addEndpoint("3", "SOS", endpointType.iasSensor, iasEndpointSubType.alarmInput);
 
-    //Temperature
-    var eptemp = endpoints.addEndpoint("4", "Temperature", endpointType.temperatureSensor);
+   //Temperature
+  
+  var eptemp = endpoints.addEndpoint("4", "Temperature", endpointType.temperatureSensor);
 
     //Light level percentage, not lumens
-    var eplight = endpoints.addEndpoint("5", "Light level", endpointType.genericSensor);
-        eplight.variableTypeId = 1044;
-    
+  
+  var eplight = endpoints.addEndpoint("5", "Light level", endpointType.genericSensor);
+  eplight.variableTypeId = 1243;
+   
+ 
 }
 
 function validateDeviceAddress(address, result)
